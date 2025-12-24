@@ -76,8 +76,8 @@ body {
 
 /* Circular Skill Cards */
 .skill-card {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -89,15 +89,43 @@ body {
   transition: all 0.3s ease;
 }
 
+@media (min-width: 640px) {
+  .skill-card {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (min-width: 768px) {
+  .skill-card {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .skill-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 40px -10px rgba(94, 98, 255, 0.4);
 }
 
 .skill-card img {
-  width: 48px;
-  height: 48px;
+  width: 28px;
+  height: 28px;
   transition: transform 0.3s ease;
+}
+
+@media (min-width: 640px) {
+  .skill-card img {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (min-width: 768px) {
+  .skill-card img {
+    width: 48px;
+    height: 48px;
+  }
 }
 
 .skill-card:hover img {

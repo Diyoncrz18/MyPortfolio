@@ -63,19 +63,19 @@ export default function TypingAnimation() {
     };
 
     return (
-        <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight tracking-tight min-h-[4em]">
-            <span className="text-4xl md:text-5xl font-semibold block mb-2">
+        <h1 className="text-2xl sm:text-3xl md:text-6xl font-bold mb-6 sm:mb-8 leading-tight tracking-tight min-h-[5em] sm:min-h-[4em]">
+            <span className="text-xl sm:text-3xl md:text-5xl font-semibold block mb-2">
                 {getPrefixText()}
                 {currentPhase === 0 && showCursor()}
             </span>
             {currentPhase >= 1 && (
-                <span className="gradient-text text-4xl md:text-5xl font-bold block mb-4">
+                <span className="gradient-text text-2xl sm:text-3xl md:text-5xl font-bold block mb-3 sm:mb-4">
                     {getMiddleText()}
                     {currentPhase === 1 && showCursor()}
                 </span>
             )}
             {currentPhase >= 2 && (
-                <span className="text-2xl md:text-3xl font-normal text-gray-400 block">
+                <span className="text-base sm:text-xl md:text-3xl font-normal text-gray-400 block">
                     {getSuffixText()}
                     {currentPhase === 2 && showCursor()}
                 </span>
