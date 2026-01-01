@@ -1,30 +1,65 @@
+import Image from 'next/image';
+
 const projects = [
     {
         id: 1,
-        title: 'Neon Finance Dashboard',
-        category: 'Fintech App',
-        description: 'A comprehensive financial dashboard with real-time data visualization and dark mode aesthetic.',
+        title: 'Auto Motive Website',
+        category: 'Car Website',
+        description: 'Platform otomotif dengan sistem inventori terintegrasi untuk memantau stok kendaraan secara real-time.',
         gradient: 'from-indigo-900/50 to-purple-900/50',
         categoryColor: 'text-indigo-400',
         borderColor: 'border-indigo-500/50',
+        image: '/images/portfolio/Screenshot (1).png',
     },
     {
         id: 2,
-        title: 'Luxe Streetwear',
-        category: 'E-Commerce',
-        description: 'High-end fashion e-commerce platform with 3D product previews and seamless checkout.',
+        title: 'Luxuri Hotel',
+        category: 'Hospitality Website',
+        description: 'Website hotel mewah dengan sistem reservasi online, galeri interaktif, dan pengalaman pengguna premium.',
         gradient: 'from-purple-900/50 to-pink-900/50',
         categoryColor: 'text-purple-400',
         borderColor: 'border-purple-500/50',
+        image: '/images/portfolio/Screenshot (43).png',
     },
     {
         id: 3,
-        title: 'Neural Interface',
-        category: 'AI Platform',
-        description: 'Web interface for an AI generation engine, featuring node-based workflows and instant previews.',
+        title: 'Stay  Hotel',
+        category: 'Hospitality Website',
+        description: 'Website hotel mewah dengan sistem reservasi online, galeri interaktif, dan pengalaman pengguna premium.',
         gradient: 'from-blue-900/50 to-cyan-900/50',
         categoryColor: 'text-blue-400',
         borderColor: 'border-blue-500/50',
+        image: '/images/portfolio/Screenshot (44).png',
+    },
+    {
+        id: 4,
+        title: 'Hotel Sochi',
+        category: 'Hospitality Website',
+        description: 'Website hotel dengan sistem manajemen terintegrasi untuk pemesanan kamar',
+        gradient: 'from-emerald-900/50 to-teal-900/50',
+        categoryColor: 'text-emerald-400',
+        borderColor: 'border-emerald-500/50',
+        image: '/images/portfolio/Screenshot (47).png',
+    },
+    {
+        id: 5,
+        title: 'Car Rental Website',
+        category: 'E-Commerce',
+        description: 'Website rental kendaraan dengan katalog lengkap, sistem booking online, dan informasi harga transparan.',
+        gradient: 'from-orange-900/50 to-amber-900/50',
+        categoryColor: 'text-orange-400',
+        borderColor: 'border-orange-500/50',
+        image: '/images/portfolio/image.png',
+    },
+    {
+        id: 6,
+        title: 'Company Profile',
+        category: 'Software House',
+        description: 'Landing page profesional dengan desain 3D modern, animasi menarik, dan call-to-action yang efektif.',
+        gradient: 'from-rose-900/50 to-pink-900/50',
+        categoryColor: 'text-rose-400',
+        borderColor: 'border-rose-500/50',
+        image: '/images/portfolio/Screenshot (6).png',
     },
 ];
 
@@ -49,12 +84,15 @@ export default function PortfolioSection() {
                             className="group relative rounded-2xl overflow-hidden bg-white/5 border border-white/10 hover:-translate-y-2 transition-transform duration-300"
                         >
                             <div className="aspect-video bg-gray-800 relative overflow-hidden">
-                                <div
-                                    className={`absolute inset-0 bg-gradient-to-tr ${project.gradient} group-hover:opacity-0 transition-opacity`}
+                                <Image
+                                    src={project.image}
+                                    alt={project.title}
+                                    fill
+                                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                                 />
-                                <div className="flex items-center justify-center h-full text-white/10 font-bold text-4xl">
-                                    PROJECT 0{project.id}
-                                </div>
+                                <div
+                                    className={`absolute inset-0 bg-gradient-to-tr ${project.gradient} opacity-60 group-hover:opacity-30 transition-opacity`}
+                                />
                             </div>
                             <div className="p-6">
                                 <div className={`text-xs font-bold ${project.categoryColor} uppercase tracking-wider mb-2`}>

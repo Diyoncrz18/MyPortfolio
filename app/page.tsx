@@ -29,7 +29,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <SkillsSection />
-        {/* <PortfolioSection /> */}
+        <PortfolioSection />
         <CertificatesSection />
         <ContactSection />
       </main>
@@ -39,3 +39,4 @@ export default function Home() {
     </div>
   );
 }
+
