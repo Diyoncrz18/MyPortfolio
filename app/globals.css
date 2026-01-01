@@ -149,3 +149,144 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #5E62FF;
 }
+
+/* Page Transition Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animated Section - Hidden by default until visible */
+.animate-section {
+  opacity: 0;
+}
+
+.animate-section.is-visible {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Animation delay utilities */
+.animate-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animate-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animate-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-delay-500 {
+  animation-delay: 500ms;
+}
+
+/* Staggered child animations */
+.stagger-children.is-visible>* {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.stagger-children.is-visible>*:nth-child(1) {
+  animation-delay: 0ms;
+}
+
+.stagger-children.is-visible>*:nth-child(2) {
+  animation-delay: 100ms;
+}
+
+.stagger-children.is-visible>*:nth-child(3) {
+  animation-delay: 200ms;
+}
+
+.stagger-children.is-visible>*:nth-child(4) {
+  animation-delay: 300ms;
+}
+
+.stagger-children.is-visible>*:nth-child(5) {
+  animation-delay: 400ms;
+}
+
+.stagger-children.is-visible>*:nth-child(6) {
+  animation-delay: 500ms;
+}
+
+.stagger-children.is-visible>*:nth-child(7) {
+  animation-delay: 600ms;
+}
+
+.stagger-children.is-visible>*:nth-child(8) {
+  animation-delay: 700ms;
+}
+
+/* Scale in animation */
+.animate-scale.is-visible {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Slide animations */
+.animate-slide-left.is-visible {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right.is-visible {
+  animation: slideInRight 0.8s ease-out forwards;
+}
